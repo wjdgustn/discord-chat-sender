@@ -1,0 +1,33 @@
+{
+  "name": "discord-chat-sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "npx cross-env NODE_ENV=production node main.js",
+    "test": "npx cross-env NODE_ENV=development nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjdgustn/discord-chat-sender.git"
+  },
+  "author": "HYONSU",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/wjdgustn/discord-chat-sender/issues"
+  },
+  "homepage": "https://github.com/wjdgustn/discord-chat-sender#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  },
+  "nodemonConfig": [
+    "views/"
+  ],
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "nodemon": "^3.1.11"
+  }
+}

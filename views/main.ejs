@@ -1,0 +1,10 @@
+<form method="post" action="/message">
+    <select name="channel">
+        <%for(let i in channels) {%>
+            <%const { id, name } = channels[i];%>
+            <option value="<%=id%>"<%=(((!req.query.channel && i === '0') || req.query.channel === id) ? ' selected' : '')%>><%=name%></option>
+        <%}%>
+    </select>
+    <input type="text" name="message" placeholder="메시지 입력" required autofocus/>
+    <button>전송</button>
+</form>
