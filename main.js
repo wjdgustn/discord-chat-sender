@@ -39,7 +39,7 @@ app.post('/message', async (req, res) => {
     const channel = channels.find(c => c.id === req.body.channel);
     if(!channel)
         return res.status(400).send('invalid channel');
-    if(!req.body.message || req.body.message.length > 4000)
+    if(!req.body.message || req.body.message.length > 4000 || req.body.message.includes('@'))
         return res.status(400).send('invalid message');
 
     await fetch(`https://discord.com/api/v9/channels/${channel.id}/messages`, {
